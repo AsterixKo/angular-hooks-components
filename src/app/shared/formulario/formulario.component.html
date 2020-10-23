@@ -1,0 +1,16 @@
+<h2>Contacto</h2>
+
+<p>formulario works!</p>
+
+<form #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
+  <label for="nombre">Nombre:</label>
+  <input type="text" name="nombre" [(ngModel)]="nombre" placeholder="Introduce tu nombre" required>
+  <br>
+  <label for="email">Email:</label>
+  <input type="text" name="email" [(ngModel)]="email" placeholder="Introduce tu email">
+  <br>
+  <label for="mensaje">Mensaje:</label>
+  <input type="text" name="mensaje" [(ngModel)]="mensaje" placeholder="Introduce tu mensaje de contacto">
+  <br>
+  <input type="submit" value="Enviar" [disabled]="!formContacto.form.valid">
+</form>
