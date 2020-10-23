@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-hooks-components';
+  showHook: boolean = true;
+
+  clickFalseHook(){
+    this.showHook=false;
+  }
 }
